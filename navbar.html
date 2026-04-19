@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eddy Brown II</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="scripts.js"></script>
+<script>
+(function(){
+    emailjs.init({
+    publicKey: "z0LbFZMrY9Wg1puyf",
+    });
+})();
+</script>
+    </head>
+    <body>
+        <section id="landing-page" onmousemove="moveBackground(event)">
+            <nav>
+                <figure>
+                    <img src="https://yoga.ayush.gov.in/assets/yoga-logo-Dogs7Ji6.png" alt="Eddy Brown II Logo">
+                </figure>
+                <ul class="nav__link--list">
+                    <li class="nav__link">
+                        <a href="#" class="
+                        nav__link--anchor
+                        link__hover--effect
+                        link__hover-effect--black">About</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="#" class="
+                        nav__link--anchor
+                        link__hover--effect
+                        link__hover-effect--black">Projects</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="#" class="
+                        nav__link--anchor
+                        link__hover--effect
+                        link__hover-effect--black">Contact</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="#" class="
+                        nav__link--anchor
+                        link__hover--effect
+                        link__hover-effect--black" >
+                        <i class="fas fa-adjust" crossorgion="anonymous" onclick="toggleContrast()"></i>
+                        <span class="sr-only">Toggle contrast</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <header class="header">
+                <div class="header__content">
+                    <h1 class="title">Hey</h1>
+                    <h1 class="title orange">I'm Eddy Brown II.</h1>
+            <p class="header__para"> <b class="green">Lorem ipsum dolor sit amet consectetur adipisicing elit.</b> Vel eum molestiae, molestias, perferendis dicta eaque accusantium sapiente
+                omnis quam error ad cum
+                sint ullam nihil? Esse nisi, dignissimos amet id commodi excepturi minus eaque nostrum non numquam eos expedita dicta quia dolore libero,<b>voluptatum asperiores.</b>
+                <br>
+            </p>
+            <div class="social__list">
+                <a href="https://www.linkedin.com/in/eddy-brown-ii-2ab79929/" class="social__link click" aria-label="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+                <a href="https://github.com/eddybbrownii" class="social__link click" aria-label="GitHub" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+                <a href="./assets/pdf/resume.pdf" class="social__link click" aria-label="Resume" target="_blank">
+                <i class="fas fa-file-pdf"></i>
+            </a>
+            </div>
+        </div>
+    </header>
+    <button class="mail__btn click" type="button" aria-label="Email" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+    </button>
+    <a href="#projects" class="scroll" type="scroll" aria-label="scroll">
+        <div class="scroll__icon click" >
+        </div>
+    </a>
+    <!--Modal-->
+    <!--About Modal-->
+    <div class="modal">
+        <div class="modal__half modal__about">
+            <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+            <h4 class="modal__subtitle--about">I'm a new Frontend Developer currently based in Hawaii.</h4>
+            <p class="modal__para modal__para--about">
+                I'm passionate about creating beautiful, functional websites that provide
+                an excellent user experience.
+                <br>
+                I would enjoy the opportunity to work on your next project.</p>
+            <div class="modal__languages">
+                <figure class="modal__language">
+                    <img class="modal__language-img"
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/07/Python_logo_14.svg" alt="python">
+                    <span class="language__name">Python</span>
+                </figure>
+                <figure class="modal__language">
+                    <img class="modal__language-img"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/250px-JavaScript-logo.png" alt="">
+                    <span class="language__name">JavaScript</span>
+                </figure>
+                <figure class="modal__language">
+                    <img class="modal__language-img"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" alt="">
+                    <span class="language__name">HTML</span>
+                </figure>
+                <figure class="modal__language">
+                    <img class="modal__language-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg" alt="">
+                    <span class="language__name">CSS</span>
+                </figure>
+            </div>
+        </div>
+        <div class="modal__half modal__contact">
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()" ></i>
+            <h3 class="modal__title" modal__title--contact>Let's have a chat.</h3>
+            <h4 class="modal__sub-title modal__sub-title--contact">I'd love to hear from you!</h4>
+            <form class="contact__form" onsubmit="contact(event)">
+                <div class="form__item">
+                    <label for="name" class="form__item--label"></label>
+                    <input type="text" class="input" name="user_name" required placeholder="Name">
+                </div>
+                <div class="form__item">
+                    <label for="Email" class="form__item--label"></label>
+                    <input type="email" class="input" name="user_email" required placeholder="Email">
+                </div>
+                <div class="form__item">
+                    <label for="Message" class="form__item--label"></label>
+                    <textarea name="message" class="input" required placeholder="Message"></textarea>
+                </div>
+                <button id="contact__submit" class="form__submit" type="submit">Send it My Way</button>
+            </form>
+            <div class="modal__overlay modal__overlay--loading">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <div class="modal__overlay modal__overlay--success">
+                Thanks for the message! I'll get back to you as soon as I can.
+            </div>
+        </div>
+    </div>
+    <img src="./assets/semi circle.svg" class="shape__0" alt="semi-circle">
+    <img src="./assets/semi circle.svg" class="shape__1" alt="semi-circle">
+    <img src="./assets/semi squiggly.svg" class="shape__2" alt="semi-circle">
+    <img src="./assets/semi circle.svg" class="shape__3" alt="semi-circle">
+    <img src="./assets/semi triangle.svg" class="shape__4" alt="semi-circle">
+    <img src="./assets/semi circle.svg" class="shape__5" alt="semi-circle">
+    <img src="./assets/semi squiggly.svg" class="shape__6" alt="semi-circle">
+    <img src="./assets/semi circle.svg" class="shape__7" alt="semi-circle">
+    <img src="./assets/semi circle.svg" class="shape__8" alt="semi-circle">
+        </section>
+        <!--Projects Section-->
+        <section id="projects">
+            <div class="container">
+                <div class="row">
+                    <h1 class="section__title">
+                        Here are some of my <span class="orange">projects.</span>
+                    </h1>
+                    <ul class="project__list">
+                        <li class="project">
+                            <div class="project__wrapper">
+                                <img src="images/project1.png" alt="Project 1" class="project__img">
+                                <div class="project__description">
+                                    <div class="project__wrapper--bg"></div>
+                                    <h3 class="project__description--title">Sales Project
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Hic ad rerum nihil explicabo eius, dolorem, voluptates natus esse veritatis,
+                                    a blanditiis nemo accusamus quis qui iure ab! Explicabo, accusantium distinctio.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="#" class="project__description--link" aria-label="GitHub">
+                                        <i class="fab fa-github>"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link" aria-label="Live Demo">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container footer__container">
+                <div class="row footer__row"></div>
+                <figure>
+                    <img class="footer__logo--img" src="./assests/logo.svg" alt="Logo">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="#" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    " aria-label="GitHub" target="_blank">
+                GitHub
+            </a>
+            <a href="#" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    " aria-label="LinkedIn" target="_blank">
+                LinkedIn
+            </a><a href="#" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    " aria-label="Contact" target="_blank">
+                Contact
+            </a><a href="#" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    " aria-label="Resume" target="_blank">
+                Resume
+            </a>
+                </div>
+                <div class="footer__copyright">
+                    <p>Copyright &copy; 2026 Eddy Brown II. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
